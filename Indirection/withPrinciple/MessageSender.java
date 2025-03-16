@@ -1,11 +1,8 @@
 package Indirection.withPrinciple;
 
-
-
 interface MessageService {
     void sendMessage(String message);
 }
-
 
 class EmailService implements MessageService {
     public void sendMessage(String message) {
@@ -18,7 +15,6 @@ class SMSService implements MessageService {
         System.out.println("Sending SMS: " + message);
     }
 }
-
 
 public class MessageSender {
     private MessageService messageService;
@@ -37,6 +33,8 @@ public class MessageSender {
 
         MessageSender smsSender = new MessageSender(new SMSService());
         smsSender.send("Hello via SMS!");
+
+        
+
     }
 }
-
